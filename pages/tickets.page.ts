@@ -11,9 +11,8 @@ export class TicketsPage extends BasePage {
         return await el.getText();
     }
 
-    async clickHotelsTab(): Promise<HotelsPage> {
+    async clickHotelsTab(): Promise<void> {
         let el = await this.driver.findElement(this.hotelsTab);
         await el.click();
-        return new HotelsPage(this.driver);
     }
 }
